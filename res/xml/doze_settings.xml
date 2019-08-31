@@ -14,7 +14,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:settings="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreference
         android:key="always_on_ambient"
@@ -69,6 +71,11 @@
             android:icon="@drawable/ic_pocket" />
 
     </PreferenceCategory>
+
+        <Preference
+            android:key="force_ambient_for_media_pref"
+            android:fragment="com.stag.horns.fragments.AmbientTicker"
+            settings:userRestriction="no_ambient_display" />
 
     <Preference
         android:key="doze_brightness"
